@@ -1,0 +1,54 @@
+<!doctype html>
+<!-- SAVE AS: index.html · LOCATION: C:/MarvelApps/join/index.html  (published: https://smarvel1963-ops.github.io/join/)
+     THE LINK WE CONTROL (Scott 2026-10-02 "yes"). Every post, the Telegram line and the Book 1 paperback QR point HERE,
+     and this page forwards to the current CMMG Discord invite. When an invite dies, change ONE line (INVITE below) -
+     nothing gets reprinted. Built after discord.gg/ABnYzChKNv expired even though it was set to never expire.
+     INVITE = "" means "no live invite right now": the page offers Telegram + Winible instead of a dead end. -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Join CMMG Sports Edge</title>
+  <meta name="robots" content="noindex">
+  <style>
+    :root { --bg: #0a0e1c; --text: #f2f4fb; --dim: #97a0bd; --accent: #5865f2; --gold: #fcd34d; }
+    * { box-sizing: border-box; }
+    body { margin: 0; min-height: 100vh; display: grid; place-items: center; background: radial-gradient(120% 70% at 50% 0%, #1e2a5a, var(--bg));
+      color: var(--text); font-family: -apple-system, "Segoe UI", Roboto, Arial, sans-serif; padding: 24px 16px; text-align: center; }
+    .box { max-width: 420px; width: 100%; }
+    h1 { font-size: 26px; margin: 0 0 8px; }
+    p { color: var(--dim); line-height: 1.5; margin: 0 0 18px; }
+    a.btn { display: block; padding: 14px 18px; border-radius: 14px; font-weight: 700; text-decoration: none; margin: 10px 0; font-size: 17px; }
+    .discord { background: var(--accent); color: #fff; }
+    .tg { background: #229ed9; color: #fff; }
+    .win { background: var(--gold); color: #111; }
+    .fine { font-size: 12px; margin-top: 22px; }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <h1>CMMG Sports Edge</h1>
+    <div id="live" hidden>
+      <p>Taking you to our Discord…</p>
+      <a class="btn discord" id="go" href="#">Join the Discord</a>
+    </div>
+    <div id="wait" hidden>
+      <p>Our Discord link is being refreshed — back shortly. Meanwhile, catch the free picks here:</p>
+      <a class="btn tg" href="https://t.me/CMMGSportsEdge">Free picks on Telegram</a>
+      <a class="btn win" href="https://winible.com/cmmgsports">CMMG on Winible</a>
+    </div>
+    <p class="fine">21+ only. Gambling problem? Call 1-800-GAMBLER.</p>
+  </div>
+  <script>
+    // >>> THE ONE LINE TO CHANGE when the Discord invite changes ("" = no live invite) <<<
+    const INVITE = "";
+    if (INVITE) {
+      document.getElementById("live").hidden = false;
+      document.getElementById("go").href = INVITE;
+      location.replace(INVITE);
+    } else {
+      document.getElementById("wait").hidden = false;
+    }
+  </script>
+</body>
+</html>
